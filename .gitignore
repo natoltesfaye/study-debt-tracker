@@ -1,0 +1,16 @@
+# Maven
+target/
+
+# VS Code
+.vscode/
+*.code-workspace
+
+# macOS
+.DS_Store
+
+# Java
+*.class
+*.log
+
+# Data file (Week 2 persistence - don't commit personal study data)
+data.json
