@@ -26,6 +26,11 @@ public class DebtCalculator {
         return calculateDebt(topic) >= CRITICAL_THRESHOLD;
     }
 
+    /** Exposes the critical threshold so callers (e.g. the UI) don't have to duplicate the magic number. */
+    public double getCriticalThreshold() {
+        return CRITICAL_THRESHOLD;
+    }
+
     public List<Topic> rankByDebt(List<Topic> topics) {
         return topics.stream()
                 .sorted(Comparator.comparingDouble(this::calculateDebt).reversed())
